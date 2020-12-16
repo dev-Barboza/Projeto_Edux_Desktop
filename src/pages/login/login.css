@@ -1,0 +1,80 @@
+html,
+.second {
+  height: 100%;
+}
+
+.first{
+  display: flex;
+}
+
+.div{
+  
+  margin-bottom: 10px;
+}
+
+ h2{
+  padding-left: 500px;
+
+}
+
+.first{
+  background-color:#f9e800;
+}
+
+
+
+.texto-container{
+    margin-left: 50px;
+}
+
+form.uno {
+  padding-left: -400px;
+}
+
+
+.second2 .uno{
+  background-color: white;
+  width: 300px;
+  padding: 5px 5px;
+ 
+}
+
+.second {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: flex-end;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: white;
+  
+}
+
+.second .uno{
+  margin-left: 550px;
+}
+
+.uno .checkbox {
+  font-weight: 400;
+}
+
+.uno .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.uno .form-control:focus {
+  z-index: 2;
+}
+.uno input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.uno input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

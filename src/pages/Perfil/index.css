@@ -1,0 +1,40 @@
+
+.perfil{
+    display: flex;
+}
+.Row {
+    width: 50%;
+    align-items: center;
+    justify-content: start;
+}
+
+.imgPerfil {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.col-md-4{
+    width: 100%;
+    text-align: center;
+}
+.container2{
+    margin-top: 25px;
+}
+
+.tabela{
+    margin-top: 20px;
+    width: 100%;
+    background-color: #00d65f;
+
+}
+
+.tabela p{
+    font-size: 20px;
+}
+
+.p2{
+    margin-left: 50px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}

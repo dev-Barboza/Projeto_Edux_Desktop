@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.curso{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+    font-size: 2em; color: #00d65f;
+
+    
+}
+
+
+.con{
+    width: 100%;
+}
+.classe{
+    margin-top: 50px;
+    margin-left: 350px;
+    width: 400px;
+    height: 75px;
+    box-shadow: -1px 4px 5px #706c6c, -1px -2px 25px #5e595d ;
+    border-radius: 25px;
+    border-width: 6px;
+    border-style: dashed;
+    border-color: #f9e800;
+    
+}
+.classe h4{
+    margin-left: 70px;
+    padding-top: 14px;
+}
+.separacoes{
+    width: 400px;
+    height: 62px;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 350px;
+    
+}
+.separacoes div{
+    
+    margin-top: 25px;
+    box-shadow: -1px 2px 2px #706c6c, -1px -1px 8px #5e595d ;
+    border-radius: 2.5px;
+}
+.separacoes div a{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    padding: 10px;
+    margin-top: 10px;
+    
+}
+div a:hover{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-size: 17px;
+}
+.activity{
+   
+    border-width: 6px;
+    border-style: dashed;
+    border-color: #f9e800;
+    margin-left: 250px;
+    margin-top: 70px;
+    width: 600px;
+    height: 230px;
+    box-shadow: -1px 4px 5px #706c6c, -1px -2px 25px #5e595d ;
+    border-radius: 25px;
+}
+
+.activity h5{
+    padding-top: 30px;
+    margin-left: 30px;
+    font-size: 18px;
+}

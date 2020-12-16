@@ -1,0 +1,53 @@
+.h1{
+    color: #f9e800;
+    font-size: x-small;
+
+}
+
+.BordaText{
+    
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: #000;
+font-size: 3em; color: #f9e800;
+}
+
+
+
+form.Terceiro {
+    padding: 15px;
+    margin-left: 45px;
+    background-color: #00d65f;
+    width: 10000px;
+}
+
+
+
+.completo .Segundo{
+    background-color: white;
+}
+
+.completo .Primeiro {
+    background-color: #f9e800;
+    width: 100%;
+    color: black;
+    margin-left: 100px;
+    
+}
+
+
+
+
+.Segundo {
+    display: flex;
+    align-items: flex-end;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: white;
+}
+
+
+
+.containerFooter {
+    margin-top: 0px;
+}
+

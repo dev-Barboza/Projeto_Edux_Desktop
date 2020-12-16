@@ -1,0 +1,51 @@
+html,
+*{
+    padding:0;
+    margin: 0;
+}
+
+.cabecalho{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    background-color: #00c2ee;
+
+}
+
+
+.cabecalho ul{
+    display:  flex;
+
+}
+.cabecalho ul{
+    text-decoration: none;
+}
+.cabecalho a{
+    color: black;
+}
+.cabecalho a:hover{
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    list-style-type: none;
+}
+.cabecalho li{
+    list-style-type: none;
+    padding: 0 20px;
+
+}
+.cabecalho nav{
+    margin-left: 20em;
+    margin-top: 13px;
+    
+}
+.cabecalho h1{
+    margin-left: 80px;
+}
+.cabecalho img{
+    width: 100px;
+    height: 60px;
+    margin-left: 45px;
+    border-width: 6px;
+    border-radius: 10px;
+}
