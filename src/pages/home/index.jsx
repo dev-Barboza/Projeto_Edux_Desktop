@@ -95,19 +95,27 @@ const Home = () => {
 
     return(
 
-    <div>
+        <div>
         <Menu/>
-        <Container >
+        <Container className="containerk">
         
             
         
-        <tbody>
+        <tbody className="bodies">
                     {
                             atividades.map((item, index) => {
                                 return (
                                     <tr key={index}>
-                                        <td>{item.nome}</td>
-                                        <td>{item.descricao}</td>
+                                        <Container  className="arrumar">
+                                            <Container className="arrumando"> 
+                                                <td className="atv">Atividade:</td>
+                                                <td>{item.nome}</td>
+                                            </Container>
+                                            <Container className="arrumando"> 
+                                                <td className="atv">Descrição da Atividade:</td>
+                                                <td>{item.descricao}</td>
+                                            </Container>
+                                        </Container>
 
                                        
                                     </tr>
@@ -121,7 +129,6 @@ const Home = () => {
     
         <Rodape/>
     </div>
-    
 
     )
     

@@ -1,55 +1,23 @@
 import React, {useEffect,useState} from 'react';
 import {Form, Button, Table, Card, Container} from 'react-bootstrap';
-import { useFirebaseApp } from 'reactfire';
-import { useHistory } from  'react-router-dom';
 import { db } from '../../utils/firebaseConfig';
 import Menu from '../../components/menu';
 import Rodape from '../../components/rodape';
 
 
-const Turmas = () => {
 
-    const history = useHistory();
-    const firebase = useFirebaseApp();
+
+const Turmas = () => {
 
     const [id, setId] = useState(0);
     const [nome, setNome] = useState('');
     const [descricao, setDescricao ] = useState(''); 
-    const [email, setEmail] = useState('');
 
-    const [cadastro, setCadastro] =useState({}) 
     const [turmas, setTurmas] = useState([]);
 
     useEffect(() =>{
         listarTurmas();
-        listarCadastro();
     },[])
-
-    const listarCadastro = () => {
-        try {
-            db.collection('cadastro')
-                .get()
-                .then( (result) => {
-                    console.log(result.docs);
-                    const data = result.docs.map(doc =>{
-                        return{
-                            
-                            
-                            email : doc.data().email
-                        }
-
-                        
-                    })
-
-                    setCadastro(data); 
-                })
-                .catch(error =>{
-                    console.error(error);
-                })
-        } catch (error) {
-            console.error(error)
-        }
-    }
 
     const listarTurmas = () => {
         try {
@@ -89,7 +57,7 @@ const Turmas = () => {
             db.collection('turmas')
                 .add(turma)
                 .then(() => {
-                    alert('Turma Adicionada com Sucesso ');
+                    alert('Atividade Adicionada com Sucesso ');
                     listarTurmas();
                     limparCampos();
                 })
@@ -99,7 +67,7 @@ const Turmas = () => {
                 .doc(id)
                 .set(turma)
                 .then(() => {
-                    alert('Turma Alterada com Sucesso ');
+                    alert('Atividade Alterada com Sucesso ');
                    
                 })
             
@@ -116,17 +84,16 @@ const Turmas = () => {
         setId(0);
         setNome('');
         setDescricao('');
-        setEmail('');
     } 
 
     const remover = (event) => {
         event.preventDefault(event)
 
-        db.collection('turmas')
+        db.collection('atividades')
             .doc(event.target.value)
             .delete()
             .then(() => {
-                alert('Turma Apagada ');
+                alert('Atividade Apagada ');
                 listarTurmas();
                  
             })
@@ -136,7 +103,7 @@ const Turmas = () => {
         event.preventDefault();
         
         try {
-            db.collection('turmas')
+            db.collection('atividades')
                 .doc(event.target.value)
                 .get()
                 .then(doc => {
@@ -156,28 +123,27 @@ const Turmas = () => {
             <Menu />
             <Container>
                 
-                <h1>Turmas</h1>
-                <p>Gerencie suas Turmas</p>
+                <h1>Atividades</h1>
+                <p>Gerencie suas atividades</p>
                 <Card>
                     <Card.Body>
                         <Form onSubmit={event => salvar(event)}>
                             <Form.Group controlId="formBasicNome">
                                 <Form.Label>Nome</Form.Label>
-                                <Form.Control type="text" value={nome} onChange={event => setNome(event.target.value)} placeholder="Nome do Curso "></Form.Control>
+                                <Form.Control type="text" value={nome} onChange={event => setNome(event.target.value)} placeholder="Titulo da Atividade"></Form.Control>
                             </Form.Group>
+
+                            <Form.Group controlId="formBasicNome">
+                                <Form.Label>Aluno</Form.Label>
+                                <Form.Control type="text" value={nome} onChange={event => setNome(event.target.value)} placeholder="Titulo da Atividade"></Form.Control>
+                            </Form.Group>
+                            
                             
                             
                             <Form.Group controlId="formBasicUrl">
                                 <Form.Label>Descrição</Form.Label>
                                 <Form.Control as="textarea" rows={3} value={descricao} onChange={event => setDescricao(event.target.value)}/>
                             </Form.Group>
-
-                                <p>Adicionar Aluno</p>
-                            <Form.Group controlId="formBasicNome">
-                                <Form.Label>Email Do aluno</Form.Label>
-                                <Form.Control type="text" value={email} onChange={event => setEmail(event.target.value)} placeholder="Email do aluno "></Form.Control>
-                            </Form.Group>
-                            
                            
                             <Button type="submit">Salvar</Button>
                         </Form>

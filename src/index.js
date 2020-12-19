@@ -18,6 +18,7 @@ import {FirebaseAppProvider} from 'reactfire';
 import firebaseConfig from './utils/firebaseConfig';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
+import Turmas from './pages/Alunoturmas';
 
 
 
@@ -28,8 +29,8 @@ const routing = (
   <Router>
     <FirebaseAppProvider firebaseConfig={firebaseConfig}>
     <Switch>
-      <Route exact path='/login' component={Login} />
-      <Route exact path='/' component={Home} />
+      <Route exact path='/' component={Login} />
+      <Route exact path='/home' component={Home} />
       <Route exact path='/cadastrar' component={Cadastrar} />
       <Route exact path='/perfil' component={Perfil} />
       <Route exact path='/configuracoes' component={Configuracoes} />
@@ -39,6 +40,8 @@ const routing = (
       <Route exact path='/turma' component={Turma}/>
       <Route exact path='/cadastroaluno' component={Cadastroaluno}/>
       <Route exact path='/objetivos' component={Objetivos}/>
+      <Route exact path='/alunoturmas' component={Turmas}/>
+
       
       
       

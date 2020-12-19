@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import { useFirebaseApp } from 'reactfire';
 import { useHistory } from  'react-router-dom';
 
-import Menu from '../../components/menu';
+
+
 import Rodape from '../../components/rodape';
 import { Container , Form , Button } from 'react-bootstrap';
 import Logo2 from  '../../assets/img/logo_2.png';
@@ -40,7 +41,7 @@ const Login = () => {
 }
     return (
       <div className="completo">
-      <Menu />
+      
             <Container className="first">
             <Container className='second'>
                 <Container className= "Texto">

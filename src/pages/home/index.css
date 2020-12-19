@@ -173,3 +173,22 @@ border-radius: 22px;
 .gerenciar{
     margin-top: 20px;
 }
+
+.arrumar{
+    height: 100px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 1.5em black;
+}
+.bodies{
+    margin: auto;
+    padding: auto;
+    
+}
+.arrumando{
+    padding: 10px;
+}
+.containerk{
+    display: flex;
+}

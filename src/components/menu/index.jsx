@@ -12,11 +12,10 @@ const Header = () => {
           <h1><img src={LogoB2} alt="Logo do Edux"/></h1>
           <nav>
               <ul>
-                <li><a href="/">Inicio</a></li>
+                <li><a href="/home">Inicio</a></li>
                 <li><a href="/perfil">Perfil</a></li>
                 <li><a href="/atividades">Atividades</a></li>
                 <li><a href="/configuracoes">Configuração</a></li>
-                <li><a href="/login">Login</a></li>
                 <li><a href="/cadastrar">Cadastrar</a></li>
                 <li><a href="/turma">turma</a></li>
               </ul>

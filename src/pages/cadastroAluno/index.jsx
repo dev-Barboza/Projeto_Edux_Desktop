@@ -4,11 +4,19 @@ import { db } from '../../utils/firebaseConfig';
 import Menu from '../../components/menu';
 import Rodape from '../../components/rodape';
 
+import { useFirebaseApp } from 'reactfire';
+
+
+
 
 const AlunosPage = () => {
+    
+   
+    const firebase = useFirebaseApp();
 
     const [id, setId] = useState(0);
     const [nome, setNome] = useState('');
+    
     
     const [alunos, setAlunos] = useState([]);
 

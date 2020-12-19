@@ -25,6 +25,11 @@ const Turma = () =>{
             <button type="button" class="btn btn-outline-success"><a href="/cadastroAluno">Integrantes</a></button>
                 
             </div>
+
+            <div>
+            <button type="button" class="btn btn-outline-success"><a href="/cadastroturma">Turmas</a></button>
+                
+            </div>
         </div>
 
         <article className="activity">
